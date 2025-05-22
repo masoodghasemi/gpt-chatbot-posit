@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "locale": "en_US",
+  "platform": "node",
+  "metadata": {
+    "appmode": "static",
+    "primary_html": "app/public/index.html",
+    "primary_rmd": null
+  },
+  "packages": null
+}
