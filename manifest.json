@@ -1,8 +1,0 @@
-{
-  "appMode": "api",
-  "primaryDocument": "app/server.js",
-  "name": "gpt-chatbot-express",
-  "title": "GPT Chatbot Tableau Extension",
-  "description": "A Tableau Extension that uses GPT to answer questions based on dashboard data.",
-  "language": "node"
-}
