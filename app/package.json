@@ -1,0 +1,12 @@
+{
+  "name": "gpt-chatbot-express",
+  "version": "1.0.0",
+  "description": "GPT Chatbot Tableau Extension with iframe headers for Posit Connect",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
