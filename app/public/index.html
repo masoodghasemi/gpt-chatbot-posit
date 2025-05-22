@@ -2,12 +2,30 @@
 <html>
 <head>
   <title>GPT Chatbot for Tableau</title>
+  <!-- ✅ Include Tableau Extensions API -->
   <script src="https://tableau.github.io/extensions-api/lib/tableau.extensions.1.latest.js"></script>
+  <link rel="stylesheet" href="https://masoodghasemi.github.io/gpt-chatbot/style.css">
   <style>
-    body { font-family: sans-serif; padding: 20px; }
-    #chat-container { max-width: 400px; margin: 0 auto; }
-    input, button { width: 100%; padding: 10px; margin-top: 10px; }
-    #response { margin-top: 20px; white-space: pre-wrap; background: #f9f9f9; padding: 10px; border: 1px solid #ccc; }
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+    #chat-container {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    #response {
+      margin-top: 20px;
+      white-space: pre-wrap;
+      background: #f9f9f9;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
   </style>
 </head>
 <body>
@@ -31,6 +49,7 @@
         console.log(msg);
       }
 
+      // DEBUG: Check if tableau is available
       if (typeof tableau === "undefined") {
         logToUI("❌ DEBUG: Tableau object is NOT defined. Extension not running inside Tableau.");
         return;
@@ -57,7 +76,7 @@
             throw new Error("No worksheets found in dashboard.");
           }
 
-          const worksheet = worksheets[0];
+          const worksheet = worksheets[0]; // Use first worksheet
           logToUI("📄 Using worksheet: " + worksheet.name);
 
           const summaryData = await worksheet.getSummaryDataAsync();
